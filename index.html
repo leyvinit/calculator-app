@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <div class="calculator">
+            <div class="settings">
+                <button class="theme-toggle" id="themeToggle">
+                    <span>🌙</span> Theme
+                </button>
+                <button class="history-toggle" id="historyToggle">
+                    <span>📝</span> History
+                </button>
+            </div>
+            
+            <div class="display">
+                <div class="expression" id="expression"></div>
+                <div class="result" id="result">0</div>
+            </div>
+            
+            <div class="special-functions">
+                <button class="special-btn" data-action="sqrt">√x</button>
+                <button class="special-btn" data-action="square">x²</button>
+                <button class="special-btn" data-action="reciprocal">1/x</button>
+            </div>
+            
+            <div class="buttons">
+                <button class="clear" data-action="clear">C</button>
+                <button class="backspace" data-action="backspace">⌫</button>
+                <button class="operator" data-action="percent">%</button>
+                <button class="operator" data-action="divide">÷</button>
+                
+                <button data-number="7">7</button>
+                <button data-number="8">8</button>
+                <button data-number="9">9</button>
+                <button class="operator" data-action="multiply">×</button>
+                
+                <button data-number="4">4</button>
+                <button data-number="5">5</button>
+                <button data-number="6">6</button>
+                <button class="operator" data-action="subtract">-</button>
+                
+                <button data-number="1">1</button>
+                <button data-number="2">2</button>
+                <button data-number="3">3</button>
+                <button class="operator" data-action="add">+</button>
+                
+                <button data-action="negate">±</button>
+                <button data-number="0">0</button>
+                <button data-number=".">.</button>
+                <button class="equals" data-action="calculate">=</button>
+            </div>
+        </div>
+        
+        <div class="history-panel" id="historyPanel">
+            <div class="history-title">
+                <span>Calculation History</span>
+                <button id="clearHistory" style="background: none; box-shadow: none; color: var(--text-color);">Clear</button>
+            </div>
+            <div id="historyList"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
